@@ -1,0 +1,46 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Renovate config for projects ivuorinen manages",
+    "extends": [
+        "config:base",
+        ":preserveSemverRanges",
+        ":enableVulnerabilityAlerts",
+        ":semanticCommits",
+        ":labels(dependencies)",
+        ":maintainLockFilesWeekly",
+        "schedule:nonOfficeHours",
+        "docker:disableMajor",
+        "npm:unpublishSafe",
+        "group:recommended",
+        "replacements:all",
+        "workarounds:all"
+    ],
+    "lockFileMaintenance": {
+        "extends": [
+            "group:all"
+        ],
+        "commitMessageAction": "Update"
+    },
+    "packageRules": [
+        {
+            "matchUpdateTypes": ["minor", "patch"],
+            "matchCurrentVersion": "!/^0/",
+            "groupName": "devDependencies (non-major)",
+            "automerge": true
+        },
+        {
+            "matchPackagePatterns": ["eslint"],
+            "groupName": "eslint"
+        }
+    ],
+    "digest": {
+        "enabled": false
+    },
+    "separateMinorPatch": false,
+    "separateMajorMinor": true,
+    "separateMultipleMajor": true,
+    "vulnerabilityAlerts": {
+      "enabled": true
+    },
+    "commitBody": "Signed-off-by: {{{gitAuthor}}}"
+}
