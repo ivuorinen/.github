@@ -1,5 +1,12 @@
 name: Run Composer Install
 
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'composer.json'
+      - 'composer.lock'
+
 jobs:
   ComposerInstall:
     runs-on: ubuntu-latest
