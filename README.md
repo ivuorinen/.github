@@ -4,7 +4,21 @@ My Shared GitHub Actions & Configurations.
 
 ## Actions
 
-tba
+Actions should be linked using the `uses` keyword. Read more from the Reusing workflows article [Calling a reusable workflow](https://docs.github.com/en/actions/using-workflows/reusing-workflows#calling-a-reusable-workflow) and [jobs.<job_id>.steps[*].uses](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsuses) configuration documentation.
+
+```yml
+jobs:
+  CompressImages:
+    uses: ivuorinen/.github/workflows/compress-images.yml
+
+  ReuseableMatrixJobForComposerInstall:
+    strategy:
+      matrix:
+        target: ['8.0', '8.1']
+    uses: ivuorinen/.github/workflows/composer-install.yml@main
+    with:
+      php-versions: ${{ matrix.target }}
+```
 
 ## Misc configurations
 
