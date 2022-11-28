@@ -3,6 +3,6 @@
   "extends": ["github>ivuorinen/.github:renovate-config"],
   "includePaths": [
     ".",
-    "workflows"
+    "./**"
   ]
 }
