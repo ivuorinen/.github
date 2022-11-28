@@ -9,13 +9,13 @@ Actions should be linked using the `uses` keyword. Read more from the Reusing wo
 ```yml
 jobs:
   CompressImages:
-    uses: ivuorinen/.github/workflows/compress-images.yml
+    uses: ivuorinen/.github/.github/workflows/compress-images.yml
 
-  ReuseableMatrixJobForComposerInstall:
+  ReusableMatrixJobForComposerInstall:
     strategy:
       matrix:
         target: ['8.0', '8.1']
-    uses: ivuorinen/.github/workflows/composer-install.yml@main
+    uses: ivuorinen/.github/.github/workflows/composer-install.yml@main
     with:
       php-versions: ${{ matrix.target }}
 ```

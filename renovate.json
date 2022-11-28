@@ -1,8 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>ivuorinen/.github:renovate-config"],
-  "includePaths": [
-    ".",
-    "./**"
-  ]
+  "extends": ["github>ivuorinen/.github:renovate-config"]
 }
