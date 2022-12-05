@@ -23,9 +23,9 @@
     },
     "packageRules": [
         {
-            "matchUpdateTypes": ["minor", "patch"],
+            "matchUpdateTypes": ["patch"],
             "matchCurrentVersion": "!/^0/",
-            "groupName": "devDependencies (non-major)",
+            "groupName": "devDependencies (patch)",
             "automerge": true
         },
         {
