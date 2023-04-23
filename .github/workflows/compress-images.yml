@@ -1,3 +1,4 @@
+---
 # Compress images on demand (workflow_dispatch), and at 11pm every Sunday (schedule).
 # Open a Pull Request if any images can be compressed.
 name: Compress Images on Demand

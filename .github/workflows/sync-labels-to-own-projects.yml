@@ -1,0 +1,39 @@
+---
+name: Sync labels to other repositories
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/labels.yml
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+    outputs:
+      repos: ${{ steps.repos.outputs.REPOS }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get Repositories
+        id: repos
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPOS="$(
+            gh repo list ivuorinen \
+              --no-archived \
+              --source \
+              --limit 15 \
+              --json nameWithOwner -q '.[] | .nameWithOwner' \
+           | sed 's|\"||'
+          )"
+
+          echo "REPOS='$REPOS'" >> $GITHUB_ENV
+
+      - uses: micnncim/action-label-syncer@v1
+        with:
+          prune: false
+          repository: ${{ needs.sync-labels.outputs.repos }}
+          token: ${{ secrets.PERSONAL_TOKEN }}

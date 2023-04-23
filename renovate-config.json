@@ -1,46 +1,53 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "description": "Renovate config for projects ivuorinen manages",
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Renovate config for projects ivuorinen manages",
+  "extends": [
+    "config:base",
+    ":preserveSemverRanges",
+    ":enableVulnerabilityAlerts",
+    ":semanticCommits",
+    ":labels(dependencies)",
+    ":maintainLockFilesWeekly",
+    "schedule:nonOfficeHours",
+    "docker:disableMajor",
+    "npm:unpublishSafe",
+    "group:recommended",
+    "replacements:all",
+    "workarounds:all"
+  ],
+  "dependencyDashboardLabels": [
+    "no-stale"
+  ],
+  "lockFileMaintenance": {
     "extends": [
-        "config:base",
-        ":preserveSemverRanges",
-        ":enableVulnerabilityAlerts",
-        ":semanticCommits",
-        ":labels(dependencies)",
-        ":maintainLockFilesWeekly",
-        "schedule:nonOfficeHours",
-        "docker:disableMajor",
-        "npm:unpublishSafe",
-        "group:recommended",
-        "replacements:all",
-        "workarounds:all"
+      "group:all"
     ],
-    "lockFileMaintenance": {
-        "extends": [
-            "group:all"
-        ],
-        "commitMessageAction": "Update"
+    "commitMessageAction": "Update"
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "matchCurrentVersion": "!/^0/",
+      "groupName": "devDependencies (patch)",
+      "automerge": true
     },
-    "packageRules": [
-        {
-            "matchUpdateTypes": ["patch"],
-            "matchCurrentVersion": "!/^0/",
-            "groupName": "devDependencies (patch)",
-            "automerge": true
-        },
-        {
-            "matchPackagePatterns": ["eslint"],
-            "groupName": "eslint"
-        }
-    ],
-    "digest": {
-        "enabled": false
-    },
-    "separateMinorPatch": false,
-    "separateMajorMinor": true,
-    "separateMultipleMajor": true,
-    "vulnerabilityAlerts": {
-      "enabled": true
-    },
-    "commitBody": "Signed-off-by: {{{gitAuthor}}}"
+    {
+      "matchPackagePatterns": [
+        "eslint"
+      ],
+      "groupName": "eslint"
+    }
+  ],
+  "digest": {
+    "enabled": false
+  },
+  "separateMinorPatch": false,
+  "separateMajorMinor": true,
+  "separateMultipleMajor": true,
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
+  "commitBody": "Signed-off-by: {{{gitAuthor}}}"
 }

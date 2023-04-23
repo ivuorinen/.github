@@ -1,0 +1,15 @@
+---
+extends: default
+
+ignore-from-file: .gitignore
+
+yaml-files:
+  - '*.yaml'
+  - '*.yml'
+  - '.yamllint.yml'
+
+rules:
+  line-length:
+    max: 120
+    level: warning
+  truthy: disable

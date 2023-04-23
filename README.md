@@ -9,13 +9,13 @@ Actions should be linked using the `uses` keyword. Read more from the Reusing wo
 ```yml
 jobs:
   CompressImages:
-    uses: ivuorinen/.github/.github/workflows/compress-images.yml
+    uses: ivuorinen/.github/workflows/compress-images.yml
 
   ReusableMatrixJobForComposerInstall:
     strategy:
       matrix:
-        target: ['8.0', '8.1']
-    uses: ivuorinen/.github/.github/workflows/composer-install.yml@main
+        target: ['8.0', '8.1', '8.2']
+    uses: ivuorinen/.github/workflows/composer-install.yml@main
     with:
       php-versions: ${{ matrix.target }}
 ```
@@ -24,7 +24,7 @@ jobs:
 
 ### Renovate config
 
-Go through [the onboarding process](https://docs.renovatebot.com/getting-started/installing-onboarding/) and save the following snippet as `renovate.json` in the project root.
+Go through [the onboarding process](https://docs.renovatebot.com/getting-started/installing-onboarding/) and save the following snippet as `.github/renovate.json`.
 
 ```json
 {
