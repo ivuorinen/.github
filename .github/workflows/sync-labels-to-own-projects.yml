@@ -8,6 +8,7 @@ on:
     paths:
       - .github/labels.yml
       - .github/workflows/sync-labels-to-own-projects.yml
+  workflow_dispatch:
 
 jobs:
   sync-labels:
@@ -26,7 +27,7 @@ jobs:
             gh repo list ivuorinen \
               --no-archived \
               --source \
-              --limit 15 \
+              --limit 25 \
               --json nameWithOwner -q '.[] | .nameWithOwner' \
            | sed 's|\"||'
           )"
@@ -38,6 +39,6 @@ jobs:
 
       - uses: micnncim/action-label-syncer@v1
         with:
-          prune: false
+          prune: true
           repository: ${{ steps.repos.outputs.REPOS }}
           token: ${{ secrets.PERSONAL_TOKEN }}
