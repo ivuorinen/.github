@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
-      - 'composer.json'
-      - 'composer.lock'
+      - "composer.json"
+      - "composer.lock"
 
 jobs:
   ComposerInstall:

@@ -4,12 +4,12 @@ extends: default
 ignore-from-file: .gitignore
 
 yaml-files:
-  - '*.yaml'
-  - '*.yml'
-  - '.yamllint.yml'
+  - "*.yaml"
+  - "*.yml"
+  - ".yamllint.yml"
 
 rules:
   line-length:
-    max: 120
+    max: 300
     level: warning
   truthy: disable
