@@ -1,7 +1,7 @@
 ---
 name: Reviewdog Linters
 
-on: [push]
+on: [ push ]
 
 jobs:
   linters:
@@ -37,7 +37,6 @@ jobs:
             --list
             --write
             --diff
-            --simplify
             --language-dialect bash
             --indent 2
             --binary-next-line

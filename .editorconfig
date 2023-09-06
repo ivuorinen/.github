@@ -40,5 +40,5 @@ tab_width = 4
 [{*.tf,*.tfvars}]
 tab_width = 4
 
-[*.md,.github/workflows/*.yml]
+[{*.md,.github/workflows/*.yml}]
 max_line_length = 300
