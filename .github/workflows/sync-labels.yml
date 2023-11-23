@@ -12,7 +12,6 @@ on:
   workflow_call:
   workflow_dispatch:
 
-
 jobs:
   labels:
     name: ♻️ Sync labels

@@ -7,7 +7,6 @@ on:
   workflow_call:
   workflow_dispatch:
 
-
 permissions:
   contents: write # only for delete-branch option
   issues: write

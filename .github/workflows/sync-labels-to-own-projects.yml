@@ -10,7 +10,6 @@ on:
       - .github/workflows/sync-labels-to-own-projects.yml
   workflow_dispatch:
 
-
 jobs:
   sync-labels:
     runs-on: ubuntu-latest
