@@ -2,33 +2,38 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Renovate config for projects ivuorinen manages",
   "extends": [
-    "config:base",
-    ":preserveSemverRanges",
+    "config:recommended",
     ":enableVulnerabilityAlerts",
-    ":semanticCommits",
     ":labels(dependencies)",
     ":maintainLockFilesWeekly",
-    "schedule:nonOfficeHours",
-    "docker:disableMajor",
-    "npm:unpublishSafe",
+    ":preserveSemverRanges",
+    ":semanticCommits",
+    ":timezone(Europe/Helsinki)",
+    "github>ivuorinen/.github//.github/renovate/autoMerge.json5",
+    "github>ivuorinen/.github//.github/renovate/commitMessage.json5",
+    "github>ivuorinen/.github//.github/renovate/labels.json5",
+    "github>ivuorinen/.github//.github/renovate/semanticCommits.json5",
+    "docker:enableMajor",
     "group:recommended",
+    "npm:unpublishSafe",
     "replacements:all",
+    "schedule:nonOfficeHours",
     "workarounds:all"
   ],
-  "dependencyDashboardLabels": ["no-stale"],
+  "dependencyDashboardLabels": [
+    "no-stale"
+  ],
   "lockFileMaintenance": {
-    "extends": ["group:all"],
+    "extends": [
+      "group:all"
+    ],
     "commitMessageAction": "Update"
   },
   "packageRules": [
     {
-      "matchUpdateTypes": ["patch"],
-      "matchCurrentVersion": "!/^0/",
-      "groupName": "devDependencies (patch)",
-      "automerge": true
-    },
-    {
-      "matchPackagePatterns": ["eslint"],
+      "matchPackagePatterns": [
+        "eslint"
+      ],
       "groupName": "eslint"
     }
   ],
@@ -37,9 +42,18 @@
   },
   "assigneesFromCodeOwners": true,
   "configMigration": true,
-  "separateMinorPatch": false,
+  "dependencyDashboardTitle": "Renovate Dashboard 🤖",
+  "ignorePaths": [
+    "**/*.sops.*",
+    "**/.archive/**"
+  ],
   "separateMajorMinor": true,
+  "separateMinorPatch": false,
   "separateMultipleMajor": true,
+  "suppressNotifications": [
+    "prEditedNotification",
+    "prIgnoreNotification"
+  ],
   "vulnerabilityAlerts": {
     "enabled": true
   },

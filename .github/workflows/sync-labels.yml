@@ -1,4 +1,5 @@
 ---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: Sync labels
 
 on:
@@ -11,6 +12,9 @@ on:
     - cron: "34 5 * * *"
   workflow_call:
   workflow_dispatch:
+
+permissions:
+  issues: write
 
 jobs:
   labels:

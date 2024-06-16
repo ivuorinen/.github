@@ -9,6 +9,8 @@ on:
       - .github/labels.yml
       - .github/workflows/sync-labels-to-own-projects.yml
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *" # Every day at midnight
 
 jobs:
   sync-labels:
