@@ -3,6 +3,11 @@ name: Reviewdog Linters
 
 on: [push]
 
+permissions:
+  contents: read
+  packages: read
+  statuses: write
+
 jobs:
   linters:
     name: Linters
