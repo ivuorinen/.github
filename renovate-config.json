@@ -9,7 +9,7 @@
     ":preserveSemverRanges",
     ":semanticCommits",
     ":timezone(Europe/Helsinki)",
-    "github>ivuorinen/.github/.github/renovate/autoMerge.json5",
+    // "github>ivuorinen/.github/.github/renovate/autoMerge.json5",
     "github>ivuorinen/.github/.github/renovate/commitMessage.json5",
     "github>ivuorinen/.github/.github/renovate/labels.json5",
     "github>ivuorinen/.github/.github/renovate/semanticCommits.json5",
