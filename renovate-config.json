@@ -2,59 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Renovate config for projects ivuorinen manages",
   "extends": [
-    "config:recommended",
-    ":enableVulnerabilityAlerts",
-    ":labels(dependencies)",
-    ":maintainLockFilesWeekly",
-    ":preserveSemverRanges",
-    ":semanticCommits",
-    ":timezone(Europe/Helsinki)",
-    "github>ivuorinen/.github/.github/renovate/commitMessage.json5",
-    "github>ivuorinen/.github/.github/renovate/labels.json5",
-    "github>ivuorinen/.github/.github/renovate/semanticCommits.json5",
-    "docker:enableMajor",
-    "group:recommended",
-    "npm:unpublishSafe",
-    "replacements:all",
-    "schedule:nonOfficeHours",
-    "workarounds:all"
-  ],
-  "dependencyDashboardLabels": [
-    "no-stale"
-  ],
-  "lockFileMaintenance": {
-    "extends": [
-      "group:all"
-    ],
-    "commitMessageAction": "Update"
-  },
-  "packageRules": [
-    {
-      "matchPackagePatterns": [
-        "eslint"
-      ],
-      "groupName": "eslint"
-    }
-  ],
-  "digest": {
-    "enabled": false
-  },
-  "assigneesFromCodeOwners": true,
-  "configMigration": true,
-  "dependencyDashboardTitle": "Renovate Dashboard 🤖",
-  "ignorePaths": [
-    "**/*.sops.*",
-    "**/.archive/**"
-  ],
-  "separateMajorMinor": true,
-  "separateMinorPatch": false,
-  "separateMultipleMajor": true,
-  "suppressNotifications": [
-    "prEditedNotification",
-    "prIgnoreNotification"
-  ],
-  "vulnerabilityAlerts": {
-    "enabled": true
-  },
-  "commitBody": "Signed-off-by: {{{gitAuthor}}}"
+    "github>ivuorinen/renovate-config"
+  ]
 }
