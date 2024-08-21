@@ -16,7 +16,7 @@ jobs:
   ReusableMatrixJobForComposerInstall:
     strategy:
       matrix:
-        target: ["8.0", "8.1", "8.2"]
+        target: ["8.0", "8.1", "8.2", "8.3"]
     uses: ivuorinen/.github/workflows/composer-install.yml@main
     with:
       php-versions: ${{ matrix.target }}
@@ -32,7 +32,7 @@ the following snippet as `.github/renovate.json`.
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>ivuorinen/.github:renovate-config"]
+  "extends": ["github>ivuorinen/renovate-config"]
 }
 ```
 
