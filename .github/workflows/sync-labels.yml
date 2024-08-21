@@ -13,13 +13,12 @@ on:
   workflow_call:
   workflow_dispatch:
 
-permissions:
-  issues: write
-
 jobs:
   labels:
     name: ♻️ Sync labels
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: ⤵️ Download latest labels definitions
         run: |

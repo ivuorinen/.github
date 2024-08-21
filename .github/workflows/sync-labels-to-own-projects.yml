@@ -12,13 +12,12 @@ on:
   schedule:
     - cron: "0 0 * * *" # Every day at midnight
 
-permissions:
-  contents: write
-  statuses: write
-
 jobs:
   sync-labels:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      statuses: write
     outputs:
       repos: ${{ steps.repos.outputs.REPOS }}
     steps:
