@@ -12,6 +12,8 @@ name: "Dependency Review"
 
 on: [pull_request]
 
+permissions: read-all
+
 jobs:
   dependency-review:
     runs-on: ubuntu-latest
