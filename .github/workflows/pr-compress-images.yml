@@ -11,7 +11,7 @@ on:
       - "**.png"
       - "**.webp"
 
-permissions: read-all
+permissions: {}
 
 jobs:
   CompressInPR:
