@@ -8,7 +8,7 @@ on:
   schedule:
     - cron: "00 23 * * 0"
 
-permissions: {}
+permissions: read-all
 
 jobs:
   CompressOnDemandOrSchedule:

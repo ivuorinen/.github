@@ -12,7 +12,7 @@ name: "Dependency Review"
 
 on: [pull_request]
 
-permissions: {}
+permissions: read-all
 
 jobs:
   dependency-review:
