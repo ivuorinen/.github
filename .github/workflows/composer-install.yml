@@ -8,8 +8,6 @@ on:
       - "composer.json"
       - "composer.lock"
 
-permissions: read-all
-
 jobs:
   ComposerInstall:
     runs-on: ubuntu-latest
