@@ -12,6 +12,10 @@ on:
   schedule:
     - cron: "0 0 * * *" # Every day at midnight
 
+permissions:
+  contents: read
+  statuses: read
+
 jobs:
   sync-labels:
     runs-on: ubuntu-latest

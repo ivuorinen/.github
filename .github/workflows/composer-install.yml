@@ -8,6 +8,11 @@ on:
       - "composer.json"
       - "composer.lock"
 
+permissions:
+  contents: read
+  packages: read
+  statuses: read
+
 jobs:
   ComposerInstall:
     runs-on: ubuntu-latest
