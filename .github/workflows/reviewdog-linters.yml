@@ -3,10 +3,6 @@ name: Reviewdog Linters
 
 on: [pull_request]
 
-permissions:
-  contents: read
-  statuses: read
-
 jobs:
   linters:
     name: Linters

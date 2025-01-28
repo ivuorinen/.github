@@ -12,16 +12,13 @@ name: "Dependency Review"
 
 on: [pull_request]
 
-permissions:
-  contents: read
-  packages: read
-  statuses: read
-
 jobs:
   dependency-review:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      packages: read
+      statuses: read
     steps:
       - name: "Checkout Repository"
         uses: actions/checkout@v4

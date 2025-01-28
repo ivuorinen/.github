@@ -4,11 +4,6 @@ name: Release Drafter
 on:
   workflow_call:
 
-permissions:
-  contents: read
-  packages: read
-  statuses: read
-
 jobs:
   update_release_draft:
     name: ✏️ Draft release
@@ -16,6 +11,7 @@ jobs:
     permissions:
       contents: write
       statuses: write
+      packages: read
     steps:
       - name: 🚀 Run Release Drafter
         uses: release-drafter/release-drafter@v6.1.0

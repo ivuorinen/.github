@@ -7,17 +7,13 @@ on:
   pull_request:
     branches: [main]
 
-permissions:
-  contents: read
-  packages: read
-  statuses: read
-
 jobs:
   laravel-tests:
     runs-on: ubuntu-latest
 
     permissions:
       contents: write
+      packages: read
       statuses: write
 
     steps:

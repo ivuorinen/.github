@@ -8,10 +8,6 @@ on:
   schedule:
     - cron: "00 23 * * 0"
 
-permissions:
-  contents: read
-  statuses: read
-
 jobs:
   CompressOnDemandOrSchedule:
     name: calibreapp/image-actions
