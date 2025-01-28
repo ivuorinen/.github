@@ -1,6 +1,9 @@
 ---
 name: Stale
 
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMAND=false
+
 on:
   schedule:
     - cron: "0 8 * * *"
@@ -8,9 +11,11 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  packages: read
+  contents: write # only for delete-branch option
+  issues: write
+  pull-requests: write
   statuses: read
+  packages: read
 
 jobs:
   stale:

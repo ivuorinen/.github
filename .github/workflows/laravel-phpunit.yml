@@ -1,11 +1,19 @@
 ---
 name: Laravel Setup and Composer test
 
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMAND=false
+
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
+
+permissions:
+  contents: write
+  packages: read
+  statuses: write
 
 jobs:
   laravel-tests:
