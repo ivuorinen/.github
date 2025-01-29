@@ -4,7 +4,7 @@
 name: Compress Images on Demand
 
 env:
-  ACTIONS_ALLOW_UNSECURE_COMMAND=false
+  ACTIONS_ALLOW_UNSECURE_COMMAND: false
 
 on:
   workflow_dispatch:

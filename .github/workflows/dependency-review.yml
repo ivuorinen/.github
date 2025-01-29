@@ -11,7 +11,7 @@
 name: "Dependency Review"
 
 env:
-  ACTIONS_ALLOW_UNSECURE_COMMAND=false
+  ACTIONS_ALLOW_UNSECURE_COMMAND: false
 
 on: [pull_request]
 

@@ -4,7 +4,7 @@ name: Reviewdog Linters
 on: [pull_request]
 
 env:
-  ACTIONS_ALLOW_UNSECURE_COMMAND=false
+  ACTIONS_ALLOW_UNSECURE_COMMAND: false
 
 permissions:
   contents: read

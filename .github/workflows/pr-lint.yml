@@ -13,7 +13,7 @@ name: Lint Code Base
 
 env:
   MAIN_BRANCH: main
-  ACTIONS_ALLOW_UNSECURE_COMMAND=false
+  ACTIONS_ALLOW_UNSECURE_COMMAND: false
 
 #############################
 # Start the job on all push #
