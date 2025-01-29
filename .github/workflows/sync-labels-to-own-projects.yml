@@ -1,9 +1,6 @@
 ---
 name: Sync labels to other repositories
 
-env:
-  ACTIONS_ALLOW_UNSECURE_COMMAND: false
-
 on:
   push:
     branches:
@@ -16,8 +13,8 @@ on:
     - cron: "0 0 * * *" # Every day at midnight
 
 permissions:
-  contents: write
-  statuses: write
+  contents: read
+  statuses: read
 
 jobs:
   sync-labels:

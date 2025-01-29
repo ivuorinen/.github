@@ -1,9 +1,6 @@
 ---
 name: Run Composer Install
 
-env:
-  ACTIONS_ALLOW_UNSECURE_COMMAND: false
-
 on:
   workflow_dispatch:
   pull_request:
@@ -12,9 +9,9 @@ on:
       - "composer.lock"
 
 permissions:
-  contents: write
+  contents: read
   packages: read
-  statuses: write
+  statuses: read
 
 jobs:
   ComposerInstall:

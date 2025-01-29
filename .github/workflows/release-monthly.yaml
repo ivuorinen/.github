@@ -2,16 +2,13 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: "Release"
 
-env:
-  ACTIONS_ALLOW_UNSECURE_COMMAND=false
-
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 1 * *" # 1st of every month at midnight
 
 permissions:
-  contents: write
+  contents: read
   packages: read
   statuses: read
 

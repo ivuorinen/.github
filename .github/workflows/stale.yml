@@ -1,8 +1,6 @@
 ---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: Stale
-
-env:
-  ACTIONS_ALLOW_UNSECURE_COMMAND: false
 
 on:
   schedule:
@@ -11,11 +9,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write # only for delete-branch option
-  issues: write
-  pull-requests: write
-  statuses: read
-  packages: read
+  contents: read
+  issues: read
+  pull-requests: read
 
 jobs:
   stale:

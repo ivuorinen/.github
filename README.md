@@ -37,5 +37,5 @@ the following snippet as `.github/renovate.json`.
 ```
 
 [reusable]: https://docs.github.com/en/actions/using-workflows/reusing-workflows#calling-a-reusable-workflow
-[jobs]: https://docs.github.com/en/actions/using-workflows/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsuses
+[jobs]: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsuses
 [onboarding]: https://docs.renovatebot.com/getting-started/installing-onboarding

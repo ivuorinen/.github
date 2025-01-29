@@ -2,9 +2,6 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: Sync labels
 
-env:
-  ACTIONS_ALLOW_UNSECURE_COMMAND: false
-
 on:
   push:
     branches:
@@ -17,7 +14,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  issues: write
+  issues: read
   contents: read
   statuses: read
   packages: read

@@ -4,7 +4,8 @@
   "private": true,
   "description": "My Shared GitHub Actions & Configurations.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npx mega-linter-runner --flavor cupcake",
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "Ismo Vuorinen <https://github.com/ivuorinen>",
   "license": "MIT",

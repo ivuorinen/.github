@@ -1,15 +1,12 @@
 ---
 name: Release Drafter
 
-env:
-  ACTIONS_ALLOW_UNSECURE_COMMAND=false
-
 on:
   workflow_call:
 
 permissions:
-  contents: write
-  statuses: write
+  contents: read
+  statuses: read
   packages: read
 
 jobs:

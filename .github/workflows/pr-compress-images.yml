@@ -1,9 +1,6 @@
 ---
 name: Compress Images
 
-env:
-  ACTIONS_ALLOW_UNSECURE_COMMAND: false
-
 on:
   pull_request:
     # Run Image Actions when JPG, JPEG, PNG or WebP files are added or changed.
@@ -15,10 +12,10 @@ on:
       - "**.webp"
 
 permissions:
-  contents: write
+  contents: read
   packages: read
-  statuses: write
-  pull-requests: write
+  statuses: read
+  pull-requests: read
 
 jobs:
   CompressInPR:
