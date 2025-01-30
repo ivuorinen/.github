@@ -30,13 +30,14 @@ env:
   SHOW_SKIPPED_LINTERS: false # Show skipped linters in MegaLinter log
   # Tooling configuration
   REPOSITORY_KICS_DISABLE_ERRORS: true # Show errors as warnings in KICS
+  SPELL_CSPELL_DISABLE_ERRORS: true
   # Linters that are run, but not reported on
   DISABLE_ERRORS_LINTERS: REPOSITORY_DEVSKIM
   # List of linters to disable. These are not typical in my repos,
   # except for spelling errors and copypasta. I'm handling those
   # with other tools.
   DISABLE: ARM, C, CLOJURE, COFFEE, COPYPASTE, DART, GROOVY, JAVA, KOTLIN, R, SALESFORCE, SCALA, SNAKEMAKE, SPELL, SWIFT, TEKTON, VBDOTNET
-  DISABLE_LINTERS: REPOSITORY_DEVSKIM
+  DISABLE_LINTERS: REPOSITORY_DEVSKIM, SPELL_CSPELL
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
