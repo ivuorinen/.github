@@ -12,6 +12,8 @@ permissions:
   contents: read
   issues: read
   pull-requests: read
+  statuses: read
+  packages: read
 
 jobs:
   stale:
